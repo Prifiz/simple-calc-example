@@ -27,7 +27,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.prifizapps</groupId>
+            <groupId>com.github.prifiz</groupId>
             <artifactId>scenario</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
