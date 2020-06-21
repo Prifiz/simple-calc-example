@@ -33,7 +33,7 @@ menuSystem:
     bindings: { field: "divSecond", runAdapter: "DivisionAdapter" }
     gotoMenu: "home"
     inputRules:
-      - { rule: "IsNumber", errorMessage: "First value should be a number" }
+      - { rule: "IsNumber", errorMessage: "Second value should be a number" }
 
  # Add First Number Input
   - name: "addFirst"
@@ -50,7 +50,7 @@ menuSystem:
     bindings: { field: "addSecond", runAdapter: "AdditionAdapter" }
     gotoMenu: "home"
     inputRules:
-      - { rule: "IsNumber", errorMessage: "First value should be a number" }
+      - { rule: "IsNumber", errorMessage: "Second value should be a number" }
 
 # Exit Menu
   - name: "exitMenu"
