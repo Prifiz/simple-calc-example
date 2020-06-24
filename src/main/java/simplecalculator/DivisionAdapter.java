@@ -12,8 +12,6 @@ public class DivisionAdapter implements CommandLineAdapter {
     public String execute() {
         int first = Integer.parseInt(divFirst);
         int second = Integer.parseInt(divSecond);
-        String result = String.valueOf(calculator.divide(first, second));
-//        System.out.println(result);
-        return result;
+        return String.valueOf(calculator.divide(first, second));
     }
 }

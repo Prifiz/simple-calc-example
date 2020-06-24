@@ -2,6 +2,7 @@ package simplecalculator;
 
 import org.prifizapps.adapters.CommandLineAdapter;
 
+// Adapter example
 public class AdditionAdapter implements CommandLineAdapter {
 
     private String addFirst;
@@ -12,8 +13,6 @@ public class AdditionAdapter implements CommandLineAdapter {
     public String execute() {
         int first = Integer.parseInt(addFirst);
         int second = Integer.parseInt(addSecond);
-        String result = String.valueOf(calculator.add(first, second));
-//        System.out.println(result);
-        return result;
+        return String.valueOf(calculator.add(first, second));
     }
 }

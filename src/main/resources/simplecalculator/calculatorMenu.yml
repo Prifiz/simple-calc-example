@@ -9,14 +9,20 @@ menuSystem:
     items:
        - name: "add"
          text: "Add"
+         inputAlternatives:
+           - "+"
          gotoMenu: "addFirst"
 
        - name: "divide"
          text: "Divide"
+         inputAlternatives:
+           - "/"
          gotoMenu: "divFirst"
 
        - name: "exit"
          text: "Exit"
+         inputAlternatives:
+           - "!q"
          gotoMenu: "exitWithConfirm"
 
   # Divide First Number Input
@@ -41,13 +47,13 @@ menuSystem:
     gotoMenu: "addSecond"
     inputRules:
       - { rule: "IsNumber", errorMessage: "First value should be a number" }
-      - { rule: "Positive", errorMessage: "" }
+      - { rule: "Positive", errorMessage: "Non-positive values prohibited!" }
     bindings: { field: "addFirst" }
 
  # Add Second Number Input
   - name: "addSecond"
     text: "Enter second value:"
-    bindings: { field: "addSecond", runAdapter: "AdditionAdapter" }
+    bindings: { field: "AdditionAdapter.addSecond", runAdapter: "AdditionAdapter" }
     gotoMenu: "home"
     inputRules:
       - { rule: "IsNumber", errorMessage: "Second value should be a number" }
@@ -67,10 +73,12 @@ menuSystem:
         inputAlternatives:
           - "y"
           - "yes"
+          - "+"
         gotoMenu: "exitMenu"
       - name: "n"
         text: "No"
         inputAlternatives:
           - "n"
           - "no"
+          - "-"
         gotoMenu: "home"

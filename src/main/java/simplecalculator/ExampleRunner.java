@@ -9,7 +9,6 @@ import java.io.InputStream;
 public class ExampleRunner {
 
     public void run() throws IOException {
-        InputStream inputStream = this.getClass().getResourceAsStream("calculatorMenu.yml");
 
         AbstractInputRule positive = new AbstractInputRule() {
             @Override
@@ -28,11 +27,11 @@ public class ExampleRunner {
             }
         };
 
+        InputStream inputStream = this.getClass().getResourceAsStream("calculatorMenu.yml");
         MenuWalkerInitiator.initMenu(inputStream)
                 .registerAdapter(new AdditionAdapter())
                 .registerAdapter(new DivisionAdapter())
                 .withCustomInputProcessors(positive)
-                // TODO register custom input rule
                 .run();
     }
 }
